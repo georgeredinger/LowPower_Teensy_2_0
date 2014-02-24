@@ -34,7 +34,7 @@ void loop(void) {
      goToSleep(); // ATmega328 goes to sleep for about 8 seconds
 // and continues to execute code when it wakes up
 digitalWrite(11,LOW);
-if (sleep_count >= sleep_total) {
+if (sleep_count % 8 == 0 ) {
   sleep_count = 0;
   digitalWrite(11,HIGH);
 // CODE TO BE EXECUTED PERIODICALLY
